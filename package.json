@@ -1,0 +1,17 @@
+{
+  "name": "edtech-doctor-intensivista",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:web": "npm run dev --workspace @doctor-intensivista/web",
+    "dev:api": "npm run dev --workspace @doctor-intensivista/api",
+    "build:web": "npm run build --workspace @doctor-intensivista/web",
+    "build:api": "npm run build --workspace @doctor-intensivista/api",
+    "build": "npm run build --workspace @doctor-intensivista/api && npm run build --workspace @doctor-intensivista/web",
+    "typecheck": "npm run typecheck --workspaces --if-present"
+  }
+}
